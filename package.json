@@ -1,0 +1,33 @@
+{
+  "name": "electron-boilerplate",
+  "version": "0.0.1",
+  "description": "boilerplate for electron app.",
+  "main": "./build//main.js",
+  "scripts": {
+    "mv:main": "cp -f ./src/main.js ./build/",
+    "mv:index": "cp -f ./src/index.html ./build/",
+    "mv:files": "npm run mv:main && npm run mv:index",
+    "pack": "npm run mv:files && webpack",
+    "watch": "npm run mv:files && webpack -w",
+    "start": "electron ."
+  },
+  "author": "Hiroyuki Tanaka",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "electron": "^1.4.3",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}
