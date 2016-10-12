@@ -2,13 +2,11 @@
   "name": "electron-boilerplate",
   "version": "0.0.1",
   "description": "boilerplate for electron app.",
-  "main": "./build//main.js",
+  "main": "main.js",
   "scripts": {
-    "mv:main": "cp -f ./src/main.js ./build/",
     "mv:index": "cp -f ./src/index.html ./build/",
-    "mv:files": "npm run mv:main && npm run mv:index",
-    "pack": "npm run mv:files && webpack",
-    "watch": "npm run mv:files && webpack -w",
+    "pack": "npm run mv:index && webpack",
+    "watch": "npm run mv:index && webpack -w",
     "start": "electron ."
   },
   "author": "Hiroyuki Tanaka",
